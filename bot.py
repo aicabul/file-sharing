@@ -7,7 +7,7 @@
 import pyromod.listen
 import sys
 
-from pyrogram import Client
+from pyrogram import Client, enums
 
 from config import (
     API_HASH,
@@ -25,7 +25,7 @@ from config import (
 class Bot(Client):
     def __init__(self):
         super().__init__(
-            "Bot",
+            name="Bot",
             api_hash=API_HASH,
             api_id=APP_ID,
             plugins={"root": "plugins"},
@@ -51,7 +51,7 @@ class Bot(Client):
                     f"Silakan periksa kembali var FORCE_SUB_CHANNEL dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL}"
                 )
                 self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/tentangsayaa01 untuk Bantuan"
+                    "\nBot Berhenti. Gabung Group https://t.me/thisissky untuk Bantuan"
                 )
                 sys.exit()
         if FORCE_SUB_GROUP:
@@ -67,7 +67,7 @@ class Bot(Client):
                     f"Silakan periksa kembali var FORCE_SUB_GROUP dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_GROUP}"
                 )
                 self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/tentangsayaa01 untuk Bantuan"
+                    "\nBot Berhenti. Gabung Group https://t.me/thisissky untuk Bantuan"
                 )
                 sys.exit()
         try:
@@ -81,11 +81,11 @@ class Bot(Client):
                 f"Pastikan Bot adalah Admin di Channel DataBase, dan Periksa kembali Nilai CHANNEL_ID, Nilai Saat Ini: {CHANNEL_ID}"
             )
             self.LOGGER(__name__).info(
-                "\nBot Berhenti. Gabung Group https://t.me/tentangsayaa01 untuk Bantuan"
+                "\nBot Berhenti. Gabung Group https://t.me/thisissky untuk Bantuan"
             )
             sys.exit()
 
-        self.set_parse_mode("html")
+        self.set_parse_mode(enums.ParseMode.HTML)
         self.LOGGER(__name__).info(
             f"[🔥 BERHASIL DIAKTIFKAN! 🔥]\n\nBOT Dibuat oleh @{OWNER}\nJika @{OWNER} Membutuhkan Bantuan, Silahkan Tanyakan ke https://t.me/mynameislonelyy"
         )
