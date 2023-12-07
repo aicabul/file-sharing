@@ -76,7 +76,7 @@ Bot Telegram untuk menyimpan Posting atau File yang dapat Diakses melalui Link K
 - Our Support Group Members
 
 ### Kanger 
-kanger [sky](https://github.com)
+kanger [sky](https:t.me/thisissky)
 
 ### Licence
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
